@@ -32,7 +32,7 @@
     "parseqs": "0.0.2",
     "parseuri": "0.0.4",
     "ws": "0.8.0",
-    "xmlhttprequest": "https://github.com/rase-/node-XMLHttpRequest/archive/a6b6f2.tar.gz"
+    "xmlhttprequest": "*"
   },
   "devDependencies": {
     "blob": "0.0.2",
