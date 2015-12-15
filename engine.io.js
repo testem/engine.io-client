@@ -723,7 +723,7 @@ Socket.prototype.filterUpgrades = function (upgrades) {
 };
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./transport":4,"./transports":5,"component-emitter":11,"debug":13,"engine.io-parser":16,"indexof":27,"parsejson":28,"parseqs":29,"parseuri":30}],4:[function(_dereq_,module,exports){
+},{"./transport":4,"./transports":5,"component-emitter":11,"debug":13,"engine.io-parser":16,"indexof":26,"parsejson":27,"parseqs":28,"parseuri":29}],4:[function(_dereq_,module,exports){
 /**
  * Module dependencies.
  */
@@ -1813,7 +1813,7 @@ Polling.prototype.uri = function(){
   return schema + '://' + this.hostname + port + this.path + query;
 };
 
-},{"../transport":4,"component-inherit":12,"debug":13,"engine.io-parser":16,"parseqs":29,"xmlhttprequest-ssl":10}],9:[function(_dereq_,module,exports){
+},{"../transport":4,"component-inherit":12,"debug":13,"engine.io-parser":16,"parseqs":28,"xmlhttprequest-ssl":10}],9:[function(_dereq_,module,exports){
 /**
  * Module dependencies.
  */
@@ -2053,7 +2053,7 @@ WS.prototype.check = function(){
   return !!WebSocket && !('__initialize' in WebSocket && this.name === WS.prototype.name);
 };
 
-},{"../transport":4,"component-inherit":12,"debug":13,"engine.io-parser":16,"parseqs":29,"ws-pure":31}],10:[function(_dereq_,module,exports){
+},{"../transport":4,"component-inherit":12,"debug":13,"engine.io-parser":16,"parseqs":28,"ws-pure":30}],10:[function(_dereq_,module,exports){
 // browser shim for xmlhttprequest module
 var hasCORS = _dereq_('has-cors');
 
@@ -3885,12 +3885,6 @@ module.exports = Array.isArray || function (arr) {
 },{}],25:[function(_dereq_,module,exports){
 
 /**
- * Module dependencies.
- */
-
-var global = _dereq_('global');
-
-/**
  * Module exports.
  *
  * Logic borrowed from Modernizr:
@@ -3899,25 +3893,15 @@ var global = _dereq_('global');
  */
 
 try {
-  module.exports = 'XMLHttpRequest' in global &&
-    'withCredentials' in new global.XMLHttpRequest();
+  module.exports = typeof XMLHttpRequest !== 'undefined' &&
+    'withCredentials' in new XMLHttpRequest();
 } catch (err) {
   // if XMLHttp support is disabled in IE then it will throw
   // when trying to create
   module.exports = false;
 }
 
-},{"global":26}],26:[function(_dereq_,module,exports){
-
-/**
- * Returns `this`. Execute this without a "context" (i.e. without it being
- * attached to an object of the left-hand side), and `this` points to the
- * "global" scope of the current JS execution.
- */
-
-module.exports = (function () { return this; })();
-
-},{}],27:[function(_dereq_,module,exports){
+},{}],26:[function(_dereq_,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -3928,7 +3912,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],28:[function(_dereq_,module,exports){
+},{}],27:[function(_dereq_,module,exports){
 (function (global){
 /**
  * JSON parse.
@@ -3963,7 +3947,7 @@ module.exports = function parsejson(data) {
   }
 };
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],29:[function(_dereq_,module,exports){
+},{}],28:[function(_dereq_,module,exports){
 /**
  * Compiles a querystring
  * Returns string representation of the object
@@ -4002,7 +3986,7 @@ exports.decode = function(qs){
   return qry;
 };
 
-},{}],30:[function(_dereq_,module,exports){
+},{}],29:[function(_dereq_,module,exports){
 /**
  * Parses an URI
  *
@@ -4043,7 +4027,7 @@ module.exports = function parseuri(str) {
     return uri;
 };
 
-},{}],31:[function(_dereq_,module,exports){
+},{}],30:[function(_dereq_,module,exports){
 
 /**
  * Module dependencies.

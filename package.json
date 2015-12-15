@@ -1,7 +1,7 @@
 {
   "name": "engine.io-client-pure",
   "description": "Client for the realtime Engine",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "homepage": "http://socket.io",
   "contributors": [
     {
@@ -26,7 +26,7 @@
     "component-inherit": "0.0.3",
     "debug": "1.0.4",
     "engine.io-parser": "1.2.2",
-    "has-cors": "1.0.3",
+    "has-cors": "1.1.0",
     "indexof": "0.0.1",
     "parsejson": "0.0.1",
     "parseqs": "0.0.2",
