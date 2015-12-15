@@ -1,7 +1,7 @@
 {
   "name": "engine.io-client-pure",
   "description": "Client for the realtime Engine",
-  "version": "1.5.5",
+  "version": "1.5.8",
   "homepage": "http://socket.io",
   "contributors": [
     {
@@ -50,7 +50,7 @@
     "test": "make test"
   },
   "browser": {
-    "xmlhttprequest": "./lib/xmlhttprequest.js"
+    "xmlhttprequest-ssl": "./lib/xmlhttprequest.js"
   },
   "repository": {
     "type": "git",
